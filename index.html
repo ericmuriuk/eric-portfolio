@@ -364,7 +364,157 @@
                 font-size: 26px;
             }
         }
-    </style>
+    /* Modern animations and hover effects */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+nav a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+button, .btn, a.button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover, .btn:hover, a.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+}
+
+.card, .project-card, .skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .project-card:hover, .skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+::selection {
+    background: #38bdf8;
+    color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* Modern glowing effects */
+.card:hover,
+.project-card:hover,
+.skill-card:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+/* Highlight section headings */
+h2 {
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.12);
+}
+
+/* Smooth appearance for content */
+section {
+    scroll-margin-top: 90px;
+}
+/* Mobile-friendly layout */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 50px 20px;
+        scroll-margin-top: 75px;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+        line-height: 1.15;
+        overflow-wrap: anywhere;
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 6vw, 2.2rem);
+    }
+
+    p {
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    nav {
+        max-width: 100%;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card,
+    .project-card,
+    .skill-card {
+        max-width: 100%;
+    }
+
+    input,
+    textarea,
+    button {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        padding: 40px 16px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+}
+</style>
 </head>
 
 <body>
